@@ -13,6 +13,7 @@ import styled from "styled-components";
 import {useState} from "react";
 import FlutixImage from '../public/images/flutix.jpeg'
 import WaysFoodImage from '../public/images/waysfood.png'
+import Scroll from "react-scroll";
 const DrawerStyle = styled(Drawer)`
       .ant-drawer-content {
         background: ${themes.color.navy};
@@ -29,6 +30,9 @@ const DrawerStyle = styled(Drawer)`
 `
 
 export default function Home() {
+
+    let Link      = Scroll.Link;
+    let scroll    = Scroll.animateScroll;
 
     const animationOptions = {
         loop: true,
@@ -51,11 +55,18 @@ export default function Home() {
         </Col>
           <Col xs={0} md={8}>
               <Row justify={"space-between"}>
-                  <TextLink >Home</TextLink>
-                  <TextLink>About</TextLink>
-                  <TextLink>Service</TextLink>
-                  <TextLink>Project</TextLink>
-                  <TextLink>Contact</TextLink>
+                  <Link to={"service"} spy={true} smooth={true} offset={0} duration={3000} delay={10}>
+                      <TextLink>Service</TextLink>
+                  </Link>
+                  <Link to={"service"} spy={true} smooth={true} offset={0} duration={3000} delay={10}>
+                      <TextLink>Service</TextLink>
+                  </Link>
+                  <Link to={"project"} spy={true} smooth={true} offset={0} duration={3000} delay={10}>
+                      <TextLink>Project</TextLink>
+                  </Link>
+                  <Link to={"contact"} spy={true} smooth={true} offset={0} duration={3000} delay={10}>
+                      <TextLink>Contact</TextLink>
+                  </Link>
               </Row>
           </Col>
           <Col xs={6} sm={0}>
@@ -70,11 +81,18 @@ export default function Home() {
                   visible={drawer}
                   // key={"drawer"}
               >
-                  <TextLink>Home</TextLink>
-                  <TextLink>About</TextLink>
-                  <TextLink>Service</TextLink>
-                  <TextLink>Project</TextLink>
-                  <TextLink>Contact</TextLink>
+                  <Link to={"service"} spy={true} smooth={true} offset={0} duration={3000} delay={10}>
+                      <TextLink>Service</TextLink>
+                  </Link>
+                  <Link to={"service"} spy={true} smooth={true} offset={0} duration={3000} delay={10}>
+                      <TextLink>Service</TextLink>
+                  </Link>
+                  <Link to={"project"} spy={true} smooth={true} offset={0} duration={3000} delay={10}>
+                      <TextLink>Project</TextLink>
+                  </Link>
+                  <Link to={"contact"} spy={true} smooth={true} offset={0} duration={3000} delay={10}>
+                      <TextLink>Contact</TextLink>
+                  </Link>
               </DrawerStyle>
           </Col>
       </Row>
@@ -98,7 +116,7 @@ export default function Home() {
             </Col>
         </Row>
 
-        <Row justify={"center"}>
+        <Row justify={"center"} name={"service"}>
             <TextTitleContent>Service Kami</TextTitleContent>
         </Row>
 
@@ -107,7 +125,7 @@ export default function Home() {
             <TextStyle style={{ color: themes.color.white, fontSize: 20}}>Service Kami Service Kami Service Kami Service Kami Service Kami Service Kami Service Kami Service Kami </TextStyle>
         </Row>
 
-        <Row justify={"center"}>
+        <Row justify={"center"} name={"project"}>
             <TextTitleContent>Project Terbaru</TextTitleContent>
         </Row>
 
@@ -174,7 +192,7 @@ export default function Home() {
         </Row>
 
 
-        <Row justify={"center"} style={{ marginTop: 40}}>
+        <Row justify={"center"} style={{ marginTop: 40}} name={"contact"}>
             <TextTitleContent>Contact Us</TextTitleContent>
         </Row>
 
