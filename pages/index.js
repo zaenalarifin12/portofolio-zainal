@@ -13,7 +13,11 @@ import styled from "styled-components";
 import {useState} from "react";
 import FlutixImage from '../public/images/flutix.jpeg'
 import WaysFoodImage from '../public/images/waysfood.png'
+import WaysLinkImage from '../public/images/wayslink.png'
+import LogoImage from '../public/images/logo.png'
+
 import Scroll from "react-scroll";
+
 const DrawerStyle = styled(Drawer)`
       .ant-drawer-content {
         background: ${themes.color.navy};
@@ -46,14 +50,21 @@ export default function Home() {
     const [drawer, setDrawer] = useState(false);
 
     return (
-    <div style={{ background: themes.color.navy, height: "100%", paddingTop: "30px"}}>
+    <div style={{ background: themes.color.navy, height: "100%", paddingTop: "30px"}} name={"home"}>
       {/*  head */}
       <Row style={{ width: "100%", padding: "10px 5% 0px 5%",top: 0, position: "fixed", zIndex: 1, background: themes.color.navy }} justify={"space-between"}>
         <Col sm={18} md={14}>
-            <TextStyle style={{ color: themes.color.white, fontSize: 20 }}>Zainal</TextStyle>
+            <Image
+            src={LogoImage.src}
+            width={40}
+            height={40}
+            />
         </Col>
           <Col xs={0} md={8}>
               <Row justify={"space-between"}>
+                  <Link to={"home"} spy={true} smooth={true} offset={0} duration={1000} delay={10}>
+                      <TextLink>Home</TextLink>
+                  </Link>
                   <Link to={"service"} spy={true} smooth={true} offset={0} duration={1000} delay={10}>
                       <TextLink>Service</TextLink>
                   </Link>
@@ -74,6 +85,9 @@ export default function Home() {
                   onClose={() => setDrawer(false)}
                   visible={drawer}
               >
+                  <Link to={"home"} spy={true} smooth={true} offset={0} duration={1000} delay={10}>
+                      <TextLink>Home</TextLink>
+                  </Link>
                   <Link to={"service"} spy={true} smooth={true} offset={0} duration={1000} delay={10}>
                       <TextLink>Service</TextLink>
                   </Link>
@@ -100,19 +114,25 @@ export default function Home() {
             </Col>
             <Col sm={24} md={12}>
                 <Card style={{ background: "transparent", borderRadius: 20, padding: 10, borderColor: themes.color.green}}>
-                    <TextStyle style={{ color: themes.color.white, fontSize: 30}}>KAMI RESPONSE RESPONSE KAMI RESPONSE</TextStyle>
-                    <TextStyle style={{ color: themes.color.white, fontSize: 19, marginTop: 30}}>DESKRIPSI DESKRIPSI DESKRIPSI DESKRIPSI DESKRIPSI DESKRIPSI DESKRIPSI DESKRIPSI DESKRIPSI DESKRIPSI DESKRIPSI DESKRIPSI DESKRIPSI DESKRIPSI DESKRIPSI DESKRIPSI DESKRIPSI DESKRIPSI DESKRIPSI DESKRIPSI DESKRIPSI DESKRIPSI DESKRIPSI DESKRIPSI</TextStyle>
+                    <TextStyle style={{ color: themes.color.white, fontSize: 30}}>Lorem Ipsum is simply dummy text of the printing </TextStyle>
+                    <TextStyle style={{ color: themes.color.white, fontSize: 19, marginTop: 30}}>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+                    </TextStyle>
                 </Card>
             </Col>
         </Row>
 
         <Row justify={"center"} name={"service"}>
-            <TextTitleContent>Service Kami</TextTitleContent>
+            <TextTitleContent>Service</TextTitleContent>
         </Row>
 
         <Row justify={"center"} style={{width: "80%", margin: "0 auto", padding: "50px 0"}}>
-            <TextStyle style={{ color: themes.color.white, fontSize: 20}}>Service Kami Service Kami Service Kami Service Kami Service Kami Service Kami Service Kami Service Kami </TextStyle>
-            <TextStyle style={{ color: themes.color.white, fontSize: 20}}>Service Kami Service Kami Service Kami Service Kami Service Kami Service Kami Service Kami Service Kami </TextStyle>
+            <TextStyle style={{ color: themes.color.white, fontSize: 20, textAlign: "center"}}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+            </TextStyle>
+            <TextStyle style={{ color: themes.color.white, fontSize: 20, textAlign: "center"}}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+            </TextStyle>
         </Row>
 
         <Row justify={"center"} name={"project"}>
@@ -134,6 +154,11 @@ export default function Home() {
                         <TextStyle style={{ color: themes.color.white, fontSize: 20, textAlign: "center"}}>
                             Application for booking cinema tickets
                         </TextStyle>
+                    </Row>
+                    <Row>
+                        <Link >
+                            {/*<Text>Lihat</Text>*/}
+                        </Link>
                     </Row>
                 </CardContentProject>
             </Col>
@@ -181,6 +206,37 @@ export default function Home() {
             </Col>
         </Row>
 
+        <Row justify={"center"} align={"middle"} style={{ width: "80%", margin:"0 auto"}}>
+            <Col sm={24} md={12} order={1} style={{marginBottom:"20px"}}>
+                <Row justify={"center"}>
+                    <Image
+                        style={{ borderRadius: 10, border: "2px solid white"}}
+                        src={WaysLinkImage.src}
+                        width={600}
+                        height={"auto"}
+                        alt="Flutix"
+                    />
+                </Row>
+            </Col>
+            <Col sm={12} md={12} order={2}>
+                <CardContentProject>
+                    <Row justify={"center"} style={{ paddingTop: 20}}>
+                        <TextStyle style={{
+                            color: themes.color.white,
+                            fontSize: 24,
+                            borderBottom: `1px solid ${themes.color.green}`,
+                            paddingBottom: 10
+                        }}>WaysLink</TextStyle>
+                    </Row>
+                    <Row justify={"center"} style={{ paddingTop: 20}}>
+                        <TextStyle style={{ color: themes.color.white, fontSize: 20}}>
+                            tools to maximize several social media combined into one
+                        </TextStyle>
+                    </Row>
+                </CardContentProject>
+            </Col>
+        </Row>
+
 
         <Row justify={"center"} style={{ marginTop: 40}} name={"contact"}>
             <TextTitleContent>Contact Us</TextTitleContent>
@@ -193,10 +249,34 @@ export default function Home() {
                         <TextStyle style={{ textAlign: "center", fontSize: 28, color: "white"}}>Contact information</TextStyle>
                     </Row>
                     <Row style={{ paddingTop: 10}}>
-                        <TextStyle style={{ textAlign: "center", fontSize: 17, color: "white"}}><MailTwoTone twoToneColor={themes.color.purple} /> zainalarifin6599@gmail.com</TextStyle>
+                        <TextStyle
+                            onClick={(e) => {
+                                window.open("mailto:zainalarifin6599@gmail.com");
+                                e.preventDefault();
+                            }}
+                            style={{
+                                cursor: "pointer",
+                                textAlign: "center",
+                                fontSize: 17,
+                                color: "white",
+                        }}>
+                            <MailTwoTone twoToneColor={themes.color.purple} /> zainalarifin6599@gmail.com
+                        </TextStyle>
                      </Row>
                     <Row>
-                        <TextStyle style={{ textAlign: "center", fontSize: 17, color: "white"}}><WhatsAppOutlined /> : 0000000</TextStyle>
+                        <TextStyle
+                            onClick={(e) => {
+                                window.open("https://wa.me/6285685815598");
+                                e.preventDefault();
+                            }}
+                            style={{
+                                paddingTop: 10,
+                                cursor: "pointer",
+                                textAlign: "center",
+                                fontSize: 17,
+                                color: themes.color.green
+                        }}><WhatsAppOutlined /> : 089686815598
+                        </TextStyle>
                     </Row>
 
                 </CardContactInformation>
@@ -248,8 +328,8 @@ export default function Home() {
             </Col>
         </Row>
 
-        <Row style={{ padding: 5, background: themes.color.purple, marginTop: 30}} justify={"center"}>
-            <TextStyle style={{ color: "white", fontSize: 20, textAlign: "center"}}>Zainal Arifin</TextStyle>
+        <Row style={{ padding: 10, background: themes.color.purple, marginTop: 30}} justify={"center"}>
+            <TextStyle style={{ color: "white", fontSize: 20, textAlign: "center"}}>&copy; Zainal Arifin</TextStyle>
         </Row>
     </div>
   )
