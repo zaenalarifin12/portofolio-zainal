@@ -45,26 +45,22 @@ export default function Home() {
 
     const [drawer, setDrawer] = useState(false);
 
-    console.log(FlutixImage)
     return (
-    <div style={{ background: themes.color.navy, height: "100%", paddingTop: 20}}>
+    <div style={{ background: themes.color.navy, height: "100%", paddingTop: "30px"}}>
       {/*  head */}
-      <Row style={{ width: "90%", margin: "0 auto" }} justify={"space-between"}>
+      <Row style={{ width: "100%", padding: "10px 5% 0px 5%",top: 0, position: "fixed", zIndex: 1, background: themes.color.navy }} justify={"space-between"}>
         <Col sm={18} md={14}>
             <TextStyle style={{ color: themes.color.white, fontSize: 20 }}>Zainal</TextStyle>
         </Col>
           <Col xs={0} md={8}>
               <Row justify={"space-between"}>
-                  <Link to={"service"} spy={true} smooth={true} offset={0} duration={3000} delay={10}>
+                  <Link to={"service"} spy={true} smooth={true} offset={0} duration={1000} delay={10}>
                       <TextLink>Service</TextLink>
                   </Link>
-                  <Link to={"service"} spy={true} smooth={true} offset={0} duration={3000} delay={10}>
-                      <TextLink>Service</TextLink>
-                  </Link>
-                  <Link to={"project"} spy={true} smooth={true} offset={0} duration={3000} delay={10}>
+                  <Link to={"project"} spy={true} smooth={true} offset={0} duration={1000} delay={10}>
                       <TextLink>Project</TextLink>
                   </Link>
-                  <Link to={"contact"} spy={true} smooth={true} offset={0} duration={3000} delay={10}>
+                  <Link to={"contact"} spy={true} smooth={true} offset={0} duration={1000} delay={10}>
                       <TextLink>Contact</TextLink>
                   </Link>
               </Row>
@@ -74,23 +70,17 @@ export default function Home() {
                   <MenuOutlined style={{ color: "white", fontSize: 34}} onClick={() => setDrawer(true)} />
               </Row>
               <DrawerStyle
-                  // title="Basic Drawer"
                   placement={"right"}
-                  // closable={true}
                   onClose={() => setDrawer(false)}
                   visible={drawer}
-                  // key={"drawer"}
               >
-                  <Link to={"service"} spy={true} smooth={true} offset={0} duration={3000} delay={10}>
+                  <Link to={"service"} spy={true} smooth={true} offset={0} duration={1000} delay={10}>
                       <TextLink>Service</TextLink>
                   </Link>
-                  <Link to={"service"} spy={true} smooth={true} offset={0} duration={3000} delay={10}>
-                      <TextLink>Service</TextLink>
-                  </Link>
-                  <Link to={"project"} spy={true} smooth={true} offset={0} duration={3000} delay={10}>
+                  <Link to={"project"} spy={true} smooth={true} offset={0} duration={1000} delay={10}>
                       <TextLink>Project</TextLink>
                   </Link>
-                  <Link to={"contact"} spy={true} smooth={true} offset={0} duration={3000} delay={10}>
+                  <Link to={"contact"} spy={true} smooth={true} offset={0} duration={1000} delay={10}>
                       <TextLink>Contact</TextLink>
                   </Link>
               </DrawerStyle>
