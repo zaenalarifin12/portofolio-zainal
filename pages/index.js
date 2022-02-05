@@ -116,7 +116,7 @@ export default function Home() {
                 <Card style={{ background: "transparent", borderRadius: 20, padding: 10, borderColor: themes.color.green}}>
                     <TextStyle style={{ color: themes.color.white, fontSize: 30}}>Lorem Ipsum is simply dummy text of the printing </TextStyle>
                     <TextStyle style={{ color: themes.color.white, fontSize: 19, marginTop: 30}}>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
                     </TextStyle>
                 </Card>
             </Col>
@@ -128,10 +128,10 @@ export default function Home() {
 
         <Row justify={"center"} style={{width: "80%", margin: "0 auto", padding: "50px 0"}}>
             <TextStyle style={{ color: themes.color.white, fontSize: 20, textAlign: "center"}}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
             </TextStyle>
             <TextStyle style={{ color: themes.color.white, fontSize: 20, textAlign: "center"}}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
             </TextStyle>
         </Row>
 
